@@ -1,3 +1,3 @@
 # spring-boot-validator
 
-spring-boot 的验证框架，基本上覆盖了大多数参数校验情况。
+基础标准JSR-303规范验证框架,整合spring-boot
