@@ -23,7 +23,7 @@ import javax.validation.constraints.Size;
 @GroupSequence({Foo.class, Foo.GroupA.class})
 public class Foo {
 
-    @NotNull(groups = {GroupA.class})
+    @NotNull(groups = {GroupA.class}, message = "sex不能为空")
     @Size(groups = {GroupA.class}, min = 1, max = 20, message = "超出范围")
     private String sex;
 

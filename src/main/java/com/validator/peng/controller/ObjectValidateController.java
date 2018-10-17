@@ -3,6 +3,7 @@ package com.validator.peng.controller;
 import com.google.common.collect.ImmutableMap;
 import com.sun.istack.internal.Nullable;
 import com.validator.peng.vo.Foo;
+import com.validator.peng.vo.ListFoo;
 import com.validator.peng.vo.NestFoo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
@@ -93,6 +94,19 @@ public class ObjectValidateController {
     public String nestGroup(@Validated(Foo.GroupA.class) @RequestBody NestFoo foo) {
         log.info(foo.toString());
         return ImmutableMap.of("result", true).toString();
+    }
+
+    /**
+     * List
+     *
+     * @param listFoo
+     * @return
+     */
+    @PostMapping("list")
+    public String list(@Validated @RequestBody ListFoo listFoo) {
+        log.info(listFoo.toString());
+        return ImmutableMap.of("result", true).toString();
+
     }
 
 
